@@ -9,6 +9,8 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,18 +19,8 @@ body {
   justify-content: center;
   padding: 30px 10px;
   font-family: 'DM Sans', sans-serif;
-  /*transition: background .4s ease-in;*/
-/*  background-image: url('https://i.pinimg.com/564x/70/e1/14/70e114ebe7d9d42014e0129314fb0a03.jpg');*/
-/*  background-color: black;*/
-  background-image: url('ECE.png');
-  background-size: cover;
-  
-  
- /* &.blue {
-/*    background-color: #428aa6;
-  background-color: black;
-
-  }*/
+  background-image: url(./ECE.png);
+  background-size:cover;
 }
 
 input[type=radio] {
@@ -37,7 +29,7 @@ input[type=radio] {
 
 .card {
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: 100%;
   left: 0;
   right: 0;
@@ -48,8 +40,8 @@ input[type=radio] {
 
 .container {
   width: 100%;
-  max-width: 800px;
-  max-height: 600px;
+  max-width: 715px;
+  max-height: 470px;
   height: 100%;
   transform-style: preserve-3d;
   display: flex;
@@ -151,29 +143,27 @@ img {
 }*/
 
 .player {
-  background-color: #ffd9b5;
+  background-image: linear-gradient(to bottom, #040d12, #070f16, #0b1119, #10131c, #14141f);;
   border-radius: 8px;
   min-width: 240px;
-  max-width: 360px;
-  padding: 16px 10px;
-  /*transition: height .4s ease-in;*/
-  max-height: 500px;
+  max-width: 300px;
+  padding: 10px 10px;
+  transition: height .4s ease-in;
+  max-height: 700px;
 }
 
 .player.expanded {
-  height: 500px;
+  height: 700px;
 }
 
 .upper-part {
   position: relative;
   display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  height: 36px;
+  align-items: left;
+  margin-bottom: 7px;
+  height: 40px;
   overflow: hidden;
 }
-
-.play-icon{ margin-right: 10px; }
 
 .song-info {
   width: calc(100% - 32px);
@@ -181,8 +171,8 @@ img {
 }
 
 .song-info .title {
-  color: #403d40;
-  font-size: 14px;
+  color: #ba702a;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -195,14 +185,14 @@ img {
 .subtitle, .time {
   font-size: 12px;
   line-height: 16px;
-  color: #c6c5c6;
+  color: #ffd9b5;
 }
 
 .info-area {
   width: 100%;
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 10px;
   transition: transform .4s ease-in;
 }
 
@@ -229,7 +219,7 @@ img {
 .read-more {
   position: absolute;
   top: 34%;
-  right: 30px;
+  right: 10px;
   transform: translateY(-50%);
   background-color: #ffe1a1;
   color: rgb(34, 22, 0);
@@ -242,13 +232,13 @@ img {
   font-size: 12px;
 }
 
-#event-name {
-  color: rgb(89, 95, 2);
-  font-weight: 600;
-}
+/*.event-name {
+  color: rgb(89, 95, 2) !important;
+  font-weight: 600 !important;
+}*/
 
 .subtitle {
-  color :rgba(61, 40, 1, 0.418);
+  color :#ffd9b5;
 }
 
 #wrapper {
@@ -256,8 +246,10 @@ img {
   transition: height 200ms;
 }
 
-p#description-of-event {  
+p.description-of-event {  
+  overflow: hidden;
   font-family: 'DM Sans', sans-serif;
-  color: #5e5b5e;
+  color: #ffd9b5;
   font-size: smaller;
+  height: 120px;
 }
