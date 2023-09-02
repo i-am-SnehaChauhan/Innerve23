@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #ffffff;
+  --white: #ffffff;
+  --bg: #00000000;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+h1{
+    font-family: 'Aladin', cursive;
+    font-size: 7rem;
+    color: #b9ecff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3{
+  margin-top:-50%;
+  font-family: 'Aladin', cursive;
+  font-size: 5rem;
+}
+.container {
+  /* background-image: url('darkgradient.png');
+  background-size:cover; /* Adjust this property as needed
+  height: 20vh; */
+  width: 100%;
+  margin-top: 3vh;
+  text-align: center;
+  position: relative; /* Required for absolute positioning of child elements */
+  overflow: hidden;
+ 
+  
+}
+.holo {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(0, 252, 252, 0.35);
+  border-radius: 5%;
+  filter: blur(10px);
+  transform: perspective(100px) rotateX(-35deg);
+  transform-style: preserve-3d;
+  animation: holographic 1.5s infinite;
+  backface-visibility: hidden;
+  margin-top: 450px;
+  margin-left: 35px;
+  overflow: hidden;
+}
+
+.holo:after {
+  position: relative;
+  z-index: -2;
+  left: -10px;
+  right: -10px;
+  content: "";
+  height: 200px;
+  background-color: rgba(0, 252, 252, 0);
+  border-radius: 5%;
+  filter: blur(2.5px);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.holo + .holo {
+  animation-duration: 0.75s;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  from {
+    will-change: unset;
+    transform: translateY(-10px);
+  }
+  to {
+    will-change: transform;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes holographic {
+  from {
+    will-change: box-shadow;
+    box-shadow:
+      0 -75px 5px rgba(0, 252, 252, 0.15),
+      0 -1px 2px rgba(0, 252, 252, 0.5),
+      0 -45px 5px rgba(0, 252, 252, 0.15),
+      0 -2px 3px rgba(0, 252, 252, 0.5),
+      0 -3px 4px rgba(0, 252, 252, 0.5),
+      0 -4px 6px rgba(0, 252, 252, 0.5),
+      0 -5px 10px rgba(0, 252, 252, 0.75),
+      0 -7px 20px rgba(0, 252, 252, 0.75),
+      0 -10px 30px rgba(0, 252, 252, 0.75),
+      0 -15px 40px rgba(0, 252, 252, 0.75),
+      0 -25px 50px rgba(0, 252, 252, 0.75),
+      0 -35px 60px rgba(0, 252, 252, 0.85),
+      0 -45px 70px rgba(0, 252, 252, 0.95),
+      0 -65px 80px rgba(0, 252, 252, 1),
+      0 -75px 90px rgba(0, 252, 252, 1);
+  }
+  to {
+    will-change: unset;
+    box-shadow:
+      0 -1px 5px rgba(0, 252, 252, 0.15),
+      0 -1px 2px rgba(0, 252, 252, 0.5),
+      0 -1px 5px rgba(0, 252, 252, 0.15),
+      0 -2px 3px rgba(0, 252, 252, 0.5),
+      0 -3px 4px rgba(0, 252, 252, 0.5),
+      0 -4px 6px rgba(0, 252, 252, 0.5),
+      0 -5px 7px rgba(0, 252, 252, 0.75),
+      0 -7px 10px rgba(0, 252, 252, 0.75),
+      0 -10px 15px rgba(0, 252, 252, 0.75),
+      0 -15px 20px rgba(0, 252, 252, 0.75),
+      0 -25px 25px rgba(0, 252, 252, 0.75),
+      0 -35px 30px rgba(0, 252, 252, 0.85),
+      0 -45px 35px rgba(0, 252, 252, 0.95),
+      0 -65px 40px rgba(0, 252, 252, 1),
+      0 -75px 50px rgba(0, 252, 252, 1);
+  }
+}
+
+.card{
+  width: 400px;
+  /* background-image: url('card.png'); */
+  text-align: center;
+  display: inline-block;
+  margin-top: 100px;
+  height:500px;
+  margin: 20px;
+  margin-top:40px;
+  position: relative; /* Required for absolute positioning of child elements */
+  
+}
+
+
+.cardbg{
+    position: relative;
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Make the image take up the full height of the container */
+    object-fit: cover; /* Preserve aspect ratio and cover the entire container */
+    position: absolute; /* Position the image relative to its container */
+    top: 10px; /* Position the image at the top of the container */
+    right: 10%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 3;
+    /* margin-bottom: 40px; */
+    /* transition: opacity 0.2s ease-in-out; */
+    /* box-shadow: 0 0 8px #fff; */
+}
+/* Remove the holo animation from the .cardbg element */
+.cardbg .holo {
+  display: none;
+}
+
+/* Apply the holo animation only when hovering over the entire card */
+.card:hover .holo {
+  display: block;
+}
+
+
+.profile{
+
+  position: absolute;
+  top: 0;
+  left: 35%;
+  right: 80%;
+  width:33%;
+  margin-top:30%;
+  height:25%;
+  z-index: 2;
+  object-fit: cover;
+  margin-bottom: 40px;
+  text-align: center;
+}
+/* .profile:hover{
+  box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5); Apply the blue glow effect to the image on hover 
+} */
+
+.card h1{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  
+}
+.card span{
+  margin: 20px 0px;
+  display: inline-block;
+  color: #999;
+  margin-top: 10px
+}
+.card p{
+  margin-bottom: 20px;
+  font-size: 20px
+}
+.card a{
+  font-size: 20px
+}
+
+.card a i:hover{
+  color: #aaaaaa;
+  
+}
+.card button{
+  display: inline-block;
+  width: 87%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 19px;
+  margin-bottom: 17px;
+  margin-top: 20px;
+  cursor: pointer;
+
+}
+.card button:hover{
+  background-color: #25a6b1
+}
