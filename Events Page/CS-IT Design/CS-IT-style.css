@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: 'DM Sans', sans-serif;
+  background-image: url(./CSE.png);
+  background-size: cover;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.card {
+  /*position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;*/
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  /*width: 100%;
+  max-width: 675px;
+  max-height: 450px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;*/
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-5, #item-2:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-1,#item-5:checked ~ .cards #song-2,#item-3:checked ~ .cards #song-4 {
+  transform: translatex(-80%) scale(.6);
+  opacity: .2;
+  z-index: -100;
+}
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-4:checked ~ .cards #song-2,#item-5:checked ~ .cards #song-4,#item-3:checked ~ .cards #song-5 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .6;
+  z-index: 100;
+   img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-5,#item-5:checked ~ .cards #song-3,#item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .6;
+  z-index: 100;
+   img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+#item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards #song-5, #item-4:checked ~ .cards #song-3,#item-5:checked ~ .cards #song-1,#item-3:checked ~ .cards #song-2 {
+  transform: translatex(80%) scale(.6);
+  opacity: .2;
+  z-index: -100;
+}
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-4, #item-5:checked ~ .cards #song-5{
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1000;
+  
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+/*#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-4, #item-3:checked ~ .cards  #song-5, #item-4:checked ~ .cards #song-1, #item-5:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .6;
+  z-index: -100;
+
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-5, #item-5:checked ~ .cards  #song-1  {
+  transform: translatex(40%) scale(.8);
+  opacity: .6;
+  z-index: -100;
+
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+#item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards  #song-5, #item-3:checked ~ .cards #song-1, #item-4:checked ~ .cards #song-2, #item-5:checked ~ .cards #song-3 {
+    transform: translatex(-80%) scale(.6);
+    opacity: .2;
+    z-index: 100;
+  }
+
+#item-1:checked ~ .cards #song-5, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2, #item-4:checked ~ .cards #song-3, #item-5:checked ~ .cards  #song-4 {
+    transform: translatex(80%) scale(.6);
+    opacity: .2;
+    z-index: 100;
+  }  
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3, #item-4:checked ~ .cards  #song-4, #item-5:checked ~ .cards  #song-5 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1000;
+  
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}*/
+
+.player {
+  background-color: #ffd9b5;
+  border-radius: 8px;
+  min-width: 240px;
+  max-width: 360px;
+  padding: 16px 10px;
+  /*transition: height .4s ease-in;*/
+  max-height: 500px;
+}
+
+.player.expanded {
+  height: 500px;
+}
+
+.upper-part {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.play-icon{ margin-right: 10px; }
+
+.song-info {
+  width: calc(100% - 32px);
+  display: block;
+}
+
+.song-info .title {
+  color: #403d40;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.sub-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.subtitle, .time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #c6c5c6;
+}
+
+.info-area {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transition: transform .4s ease-in;
+}
+
+#item-2:checked ~ .player #test {
+  transform: translateY(0);
+}
+
+#item-2:checked ~ .player #test  {
+  transform: translateY(-40px);
+}
+
+#item-3:checked ~ .player #test  {
+  transform: translateY(-80px);
+}
+
+#item-4:checked ~ .player #test  {
+    transform: translateY(-120px);
+}
+
+#item-5:checked ~ .player #test  {
+    transform: translateY(-160px);
+}  
+
+.read-more {
+  position: absolute;
+  top: 34%;
+  right: 30px;
+  transform: translateY(-50%);
+  background-color: #ffe1a1;
+  color: rgb(34, 22, 0);
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border-color: #ffe1a1;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#event-name {
+  color: rgb(89, 95, 2);
+  font-weight: 600;
+}
+
+.subtitle {
+  color :rgba(61, 40, 1, 0.418);
+}
+
+#wrapper {
+  overflow: hidden;
+  transition: height 200ms;
+}
+
+p#description-of-event {  
+  font-family: 'DM Sans', sans-serif;
+  color: #5e5b5e;
+  font-size: smaller;
+}
