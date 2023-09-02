@@ -17,6 +17,7 @@ body {
 	--color-heading: #111;
 	color: var(--color-text);
 	background-image:url("../img/gallery_bg.jpeg");
+	background-size:cover;
 	font-family: nimbus-sans, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
