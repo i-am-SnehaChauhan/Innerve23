@@ -66,9 +66,12 @@ body {
     margin-bottom: 15px;
 } */
 
-/* .image1:hover {
+/* .sponsor-logo:hover {
     transform: scale(1.1); 
     cursor: pointer; 
+} */
+/* .sponsor-logo:hover{
+    background-color: rgba(0,0,0,0.5);
 } */
 
 .image2 {
@@ -78,6 +81,13 @@ body {
     left: 40%;
     max-width: 220px;
     transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.sponsor-logo>.image2:hover{
+    /* scale: 0 0 110%; */
+    transform: scale(1.1);
+    /* cursor: pointer; */
 }
 
 .dot-pattern {
