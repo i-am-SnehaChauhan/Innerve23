@@ -141,7 +141,7 @@ img {
 }*/
 
 .player {
-  background-image: linear-gradient(to bottom, #040d12, #070f16, #0b1119, #10131c, #14141f);;
+  background-image: linear-gradient(to bottom, #040d12, #070f16, #0b1119, #10131c, #14141f);
   border-radius: 8px;
   min-width: 240px;
   max-width: 300px;
