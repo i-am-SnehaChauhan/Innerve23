@@ -29,11 +29,32 @@
     </nav>
 
     
-    <label for="nav-toggle" class="icon-burger">
+    <label for="nav-toggle" class="icon-burger burger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </label>
+    <script>
+        const adjustMenuPosition = () => {
+            const navToggle = document.getElementById("nav-toggle");
+            const menu = document.querySelector(".links");
+
+            if (navToggle.checked) {
+                const viewportHeight = window.innerHeight;
+                const navbarHeight = 100; // Adjust this to match your navbar height
+
+                menu.style.maxHeight = `${viewportHeight - navbarHeight}px`;
+                menu.style.overflowY = "auto";
+            } else {
+                menu.style.maxHeight = "0";
+                menu.style.overflowY = "hidden";
+            }
+        };
+
+        window.addEventListener("resize", adjustMenuPosition);
+        adjustMenuPosition();
+    </script>
+
     
     
 </body>

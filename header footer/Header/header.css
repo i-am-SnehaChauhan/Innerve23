@@ -4,7 +4,6 @@ body {
 }
 
 nav {
-    
     position: fixed;
     z-index: 10;
     left: 0;
@@ -80,7 +79,17 @@ nav .icon-burger .line {
     transition: all .5s ease-in-out;
 }
 @media screen and (max-width: 768px) {
-    
+    .burger{
+        height: fit-content;
+        overflow-y: scroll;
+    }
+    nav input{
+        height: fit-content;
+        overflow-y: visible;
+    }
+    nav{
+        z-index: 11;
+    }
     nav .links {
         float: none;
         position: fixed;
@@ -89,20 +98,27 @@ nav .icon-burger .line {
         right: 0;
         top: 100px;
         bottom:100% ;
-        width: auto;
+        width: 100%;
         height: auto;
         flex-direction: column;
         justify-content: space-evenly;
         background-color: rgba(0, 0, 0, .8);
-        
-        overflow-y: scroll;
+        overflow-y:scroll;
         transition: all .5s ease-in-out;
+    }
+    nav .links.active {
+        padding-top: 300px;
+        max-height: calc(100vh-100px); /* Adjust the 100px according to your navbar height */
+         overflow-y: scroll;/* Enable vertical scrolling */
     }
     nav .links a {
         font-size: 20px;
     }
     nav :checked ~ .links {
         bottom: 0;
+        padding-top: 100px;
+        overflow-y: scroll;
+
     }
     nav .icon-burger {
         display: block;
